@@ -1,0 +1,13 @@
+{
+  "name": "multi-module-app",
+  "version": "1.0.0",
+  "description": "Multi-module application for CI/CD and Kubernetes",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
