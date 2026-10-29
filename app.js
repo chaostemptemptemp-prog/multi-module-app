@@ -25,6 +25,21 @@ app.get("/api/feature", (req, res) => {
   res.json(getAdditionalFeature());
 });
 
+app.get("/api/combined", (req, res) => {
+  const basic = getBasicFeature();
+  const additional = getAdditionalFeature();
+
+  res.json({
+    application: "Multi-Module App",
+    version: "v3",
+    message: "Both modules are connected",
+    modules: {
+      module1: basic,
+      module2: additional
+    }
+  });
+});
+
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Application running on port ${PORT}`);
 });
